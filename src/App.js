@@ -7,23 +7,11 @@ import Intro from './components/Intro.js';
 import { LoginProvider } from './components/Login/LoginContext.js';
 
 function App() {
-
-  const router = createBrowserRouter([
-  {
-    path:'/',
-    element:<Login />
-  },
-  {
-    path:'/intro',
-    element:<Intro />
-  }
-])
   
-  return (        
-    <LoginProvider>
-      <RouterProvider router={router}></RouterProvider>  
-    </LoginProvider>
-  );
-}
+          {/* Login route */}
+          <Route path="/login" element={<Login />} />
+          
+          {/* CalculatorPage */}
+          <Route path="/calculator" element={<Intro />} />
 
 export default App;
