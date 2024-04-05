@@ -12,11 +12,6 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Login = () => {
     const {  isLogin, toggleLoginRegister, showPassword, error, handleFormSubmit, handleSubmit, formData, validationErrors, handleChange, handlePasswordVisibility, openSnackbar, setOpenSnackbar  } = useLoginContext();
-
-    useEffect(() => {
-        // Set document title when component mounts or screenWidth changes
-        document.title = "Login or Register"; // Set your desired title here
-    }, []);
     
     const handleCloseSnackbar = (event, reason) => {
       if (reason === 'clickaway') {
