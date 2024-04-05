@@ -19,8 +19,10 @@ function App() {
   }
 ])
   
-  return (    
-    <RouterProvider router={router}></RouterProvider>
+  return (        
+    <LoginProvider>
+      <RouterProvider router={router}></RouterProvider>  
+    </LoginProvider>
   );
 }
 
