@@ -7,11 +7,14 @@ import Intro from './components/Intro.js';
 import { LoginProvider } from './components/Login/LoginContext.js';
 
 function App() {
+
+  return(
   
           {/* Login route */}
           <Route path="/login" element={<Login />} />
           
           {/* CalculatorPage */}
           <Route path="/calculator" element={<Intro />} />
+);
 
 export default App;
