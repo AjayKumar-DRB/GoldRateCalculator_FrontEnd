@@ -13,10 +13,15 @@ const Intro = () => {
 
 
     useEffect(() => {
+        // Set document title when component mounts or screenWidth changes
+        document.title = "Gold Rate Calculator"; // Set your desired title here
+    }, []);
+    
+    useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
             setIntitialAdjustment(0);
-        };
+    };
 
         window.addEventListener('resize', handleResize);
 
