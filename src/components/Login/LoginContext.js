@@ -56,7 +56,7 @@ export const LoginProvider = ({ children }) => {
   };
 
 
-  const serverURL = 'http://www.localhost:4000'
+  const serverURL = 'https://goldratecalculator-backend.onrender.com'
 
   const handleSubmit = async (e) => {
     e.preventDefault();
