@@ -13,7 +13,7 @@ const NavBar = () => {
               'Content-Type': 'application/json',
             },
           };
-          const response = await fetch('http://www.localhost:4000/logout', options);
+          const response = await fetch('https://goldratecalculator-backend.onrender.com/logout', options);
           if (response.status === 200) {
             localStorage.removeItem('token');
             // Redirect to login page after successful logout
