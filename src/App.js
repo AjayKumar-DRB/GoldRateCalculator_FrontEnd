@@ -7,14 +7,24 @@ import Intro from './components/Intro.js';
 import { LoginProvider } from './components/Login/LoginContext.js';
 
 function App() {
+  const isAuthenticated = localStorage.getItem('token'); // Check if token exists in localStorage
 
-  return(
-  
-          {/* Login route */}
+  return (
+    <LoginProvider>
+      <Router>
+        <Routes>
+          {/* Redirect to intro page if authenticated */}
+          {isAuthenticated && <Route path="/login" element={<Navigate to="/intro" />} />}
+          {/* Redirect to login page if not authenticated */}
+          {!isAuthenticated && <Route path="/" element={<Navigate to="/login" />} />}
+          {!isAuthenticated && <Route path="/intro" element={<Navigate to="/login" />} />}
           <Route path="/login" element={<Login />} />
-          
-          {/* CalculatorPage */}
-          <Route path="/calculator" element={<Intro />} />
-);
+          {/* Show Intro component only if authenticated */}
+          {isAuthenticated && <Route path="/intro" element={<Intro />} />}
+        </Routes>
+      </Router>
+    </LoginProvider>
+  );
+}
 
 export default App;
