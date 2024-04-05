@@ -8,7 +8,7 @@ export const useCalculatorContext = () => useContext(CalculatorContext);
 
 export const CalculatorProvider = ({ children }) => {
 
-  const baseURL = 'http://localhost:4000';
+  const baseURL = 'https://goldratecalculator-backend.onrender.com';
   const [goldRate, setGoldRate] = useState();
   const [weight, setWeight] = useState();
   const [currency, setCurrency] = useState('');
