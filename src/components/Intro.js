@@ -10,12 +10,6 @@ const Intro = () => {
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [ intitialAdjustment, setIntitialAdjustment ] = useState(400);
-
-
-    useEffect(() => {
-        // Set document title when component mounts or screenWidth changes
-        document.title = "Gold Rate Calculator"; // Set your desired title here
-    }, []);
     
     useEffect(() => {
         const handleResize = () => {
